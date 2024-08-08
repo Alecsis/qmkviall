@@ -6,19 +6,14 @@
 
 enum custom_keycodes
 {
-    DSC,
-    SPOT,
-    ARC,
     TURBO = SAFE_RANGE,
-
-
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT_pad_4x3(
         //main
-        DSC,   SPOT,   ARC,   KC_MPLY,
+        KC_TRNS,   KC_TRNS,   KC_TRNS,   KC_MPLY,
         TURBO ,   KC_6,   KC_7,   KC_8,
         LCTL(KC_C),   LCTL(KC_V),   KC_F13,   TG(1)
       
@@ -57,72 +52,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       
     ),                          
 };
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [0] =   { ENCODER_CCW_CW(KC_MS_WH_UP, KC_MS_WH_DOWN), ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
+    [1] =   { ENCODER_CCW_CW(RGB_HUD, RGB_HUI),           ENCODER_CCW_CW(RGB_SAD, RGB_SAI)  },
+    [2] =   { ENCODER_CCW_CW(RGB_VAD, RGB_VAI),           ENCODER_CCW_CW(RGB_SPD, RGB_SPI)  },
+    [3] =   { ENCODER_CCW_CW(RGB_RMOD, RGB_MOD),          ENCODER_CCW_CW(KC_RIGHT, KC_LEFT) },
+    [4] =   { ENCODER_CCW_CW(RGB_RMOD, RGB_MOD),          ENCODER_CCW_CW(KC_RIGHT, KC_LEFT) },
+    [5] =   { ENCODER_CCW_CW(RGB_RMOD, RGB_MOD),          ENCODER_CCW_CW(KC_RIGHT, KC_LEFT) },
+
+};
+#endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {    if (!process_mouse_turbo_click(keycode, record, TURBO)) {
         return false;
     }
-    switch (keycode)
-    {
-       case DSC:
-            if (record->event.pressed)
-            {
-                SEND_STRING(SS_DOWN(X_LGUI) SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(100) "C:\\Users\\Truong Dang\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Discord Inc\\Discord.lnk" SS_TAP(X_ENTER));
 
-
-            }
-            else{
-
-                //no trigger
-            }
-            break;
-                        
-       case SPOT:
-            if (record->event.pressed)
-            {
-                SEND_STRING(SS_DOWN(X_LGUI) SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(100) 
-            "C:\\Users\\Truong Dang\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Spotify.lnk" 
-            SS_TAP(X_ENTER));
-
-
-            }
-            else{
-                //no trigger
-            }
-            break;
-       case ARC:
-            if (record->event.pressed)
-            {
-                SEND_STRING(SS_DOWN(X_LGUI) SS_TAP(X_R) SS_UP(X_LGUI) SS_DELAY(100) 
-            "arc" 
-            SS_TAP(X_ENTER));     
-
-            }
-            else{
-                //no trigger
-            }
-            break;            
-    }
     return true;
 }   
 
-bool encoder_update_kb(uint8_t index, bool clockwise) {
-    if (!encoder_update_user(index, clockwise)) { return false; }
-    if (index == 0) { /* First encoder */
-        if (clockwise) {
-            tap_code(KC_MNXT);
-        } else {
-            tap_code(KC_MPRV);
-        }
-    } else if (index == 1) { /* Second encoder */
-        if (clockwise) {
-            tap_code(KC_VOLU);
-        } else {
-            tap_code(KC_VOLD);
-        }
-    }
-    return true;
-}
     
 enum layer_names {
     _MAC_DEFAULT,
