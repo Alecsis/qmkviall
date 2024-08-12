@@ -21,6 +21,10 @@ It can perform the following actions:
 Since Arc(my browser) doesn't have support for shortcuts I use the following:
 `WIN+R` Type in `arc` delay 200ms `ENTER`
 
+# This project is also built on top the my [fork of QMK](https://github.com/qmk/qmk_firmware/compare/master...Alecsis:qmk_firmware:master) <br />
+I am sorry to whoever is reviewing this due to looking at two repos, VIAL is a fork of the default QMK firmware so that is why :(
+
+
 # Reflection
 This is my first major project, and through this journey, I implemented some ideas and features, such as animations, but dropped the idea when it came to practicality. It also shows new efficient techniques, such as when I used to program macros directly into QMK via the `WIN + R` code, which was hit or miss half of the time.
 
