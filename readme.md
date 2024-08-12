@@ -28,7 +28,7 @@ This is my first major project, and through this journey, I implemented some ide
 
 This whole project would not have happened if my cousin had not sent me the board! So thanks to him!
 
-[QMK DOCS](https://docs.qmk.fm/)
+[QMK DOCS](https://docs.qmk.fm/) \n
 [VIAL PORTING](https://get.vial.today/docs/)
 [WINDOWS SHORTCUTS](https://www.youtube.com/watch?v=wkyzO7Mz2Ls)]
 W REDDIT POST WITH [BOOTLOADER INSTRUCTIONS](https://www.reddit.com/r/olkb/comments/9ctx37/qmk_burn_dfu_bootloader_into_keyboard_with/) 
