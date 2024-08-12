@@ -28,11 +28,11 @@ This is my first major project, and through this journey, I implemented some ide
 
 This whole project would not have happened if my cousin had not sent me the board! So thanks to him!
 
-[QMK DOCS](https://docs.qmk.fm/) \n
-[VIAL PORTING](https://get.vial.today/docs/)
-[WINDOWS SHORTCUTS](https://www.youtube.com/watch?v=wkyzO7Mz2Ls)]
-W REDDIT POST WITH [BOOTLOADER INSTRUCTIONS](https://www.reddit.com/r/olkb/comments/9ctx37/qmk_burn_dfu_bootloader_into_keyboard_with/) 
-HUGE THANKS TO THIS GUY THAT MADE THE [AUTOCLICKER SCRIPT](https://getreuer.info/posts/keyboards/mouse-turbo-click/index.html)
-[Image to CPP](https://javl.github.io/image2cpp/)
-[Joe Scotto's QMK OLED Documentation](https://www.youtube.com/watch?v=OJSOEStpPIo)
-[Joe Scotto's VIAL Porting Tutorial](https://www.youtube.com/watch?v=O8pdUPqPG3k)
+[QMK DOCS](https://docs.qmk.fm/)<br />
+[VIAL PORTING](https://get.vial.today/docs/)<br />
+[WINDOWS SHORTCUTS](https://www.youtube.com/watch?v=wkyzO7Mz2Ls)]<br />
+W REDDIT POST WITH [BOOTLOADER INSTRUCTIONS](https://www.reddit.com/r/olkb/comments/9ctx37/qmk_burn_dfu_bootloader_into_keyboard_with/) <br />
+HUGE THANKS TO THIS GUY THAT MADE THE [AUTOCLICKER SCRIPT](https://getreuer.info/posts/keyboards/mouse-turbo-click/index.html)<br />
+[Image to CPP](https://javl.github.io/image2cpp/)<br />
+[Joe Scotto's QMK OLED Documentation](https://www.youtube.com/watch?v=OJSOEStpPIo)<br />
+[Joe Scotto's VIAL Porting Tutorial](https://www.youtube.com/watch?v=O8pdUPqPG3k)<br />
