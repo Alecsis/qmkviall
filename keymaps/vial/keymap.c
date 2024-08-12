@@ -1,6 +1,3 @@
-// Copyright 2023 QMK
-// SPDX-License-Identifier: GPL-2.0-or-later
-
 #include QMK_KEYBOARD_H
 #include "features/mouse_turbo_click.h"
 
@@ -93,52 +90,47 @@ enum layer_names {
 // Draw to OLED
 bool oled_task_user() {
     // Set cursor position
+    //becuase qmk is garbago you have to flash it with the logo array first and then the layer indicators :p
     
     oled_set_cursor(0, 0);
 
- 
+  
     oled_write_P(PSTR("EVA-03"), false);
-
     oled_write_P(PSTR(" "), false);
         switch (get_highest_layer(layer_state)) {
         case _MAC_DEFAULT :
    
-            oled_write_P(PSTR(" Main\n"), false);
+            oled_write_P(PSTR(" Main"), false);
                 
             break;
         case _MAC_UTILITY :
 
-            oled_write_P(PSTR(" Util\n"), false);
+            oled_write_P(PSTR(" Util"), false);
        
             break;
         case _MAC_MOMENTARY : 
 
-            oled_write_P(PSTR(" AUX\n"), false);
+            oled_write_P(PSTR(" AUX"), false);
     
             break;
         case _MAC_MOLAYER :       
 
-            oled_write_P(PSTR(" MO\n"), false);
+            oled_write_P(PSTR(" MO"), false);
        
             break;
         case _MAC_NUMPAD :        
 
-            oled_write_P(PSTR(" Numpad\n"), false);
+            oled_write_P(PSTR(" Numpad"), false);
       
             break;
         case _MAC_F360 :
  
-            oled_write_P(PSTR(" Fusion\n"), false);
+            oled_write_P(PSTR(" Fusion"), false);
      
             break;
     }
-    
+        oled_write_P(PSTR("   "), false);
 
-        uint8_t gx = 15;
-    uint8_t gy = 0;
-    void oled_clear(void);
-
-    oled_set_cursor(gx, gy);
         static const char PROGMEM raw_logo[] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0x80, 0x00, 0x00, 0x00, 0xf0, 0xf8, 0xf8, 
 0xf8, 0xfc, 0xfc, 0xbc, 0xc0, 0xc0, 0xe0, 0xc0, 0xc0, 0xc0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -174,6 +166,7 @@ bool oled_task_user() {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
         };
     oled_write_raw_P(raw_logo, sizeof(raw_logo));
+
     return false;
 }
 
