@@ -1,7 +1,7 @@
 # Custom Macropad with QMK and VIAL Support
 ![test](https://github.com/user-attachments/assets/7e281194-e074-43e5-a750-de7b1ccfd4a5)
 
-<img src="https://github.com/favicon.ico" height="80">
+<img src="https://github.com/favicon.ico" height="50">
 
 ## This project is for anyone starting with QMK, providing examples that can be used in their own code, as setting up this project was quite challenging.
 
